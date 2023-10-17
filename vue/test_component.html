@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app" >
+    <fu v-for="item in classes" v-bind:kong="item"> </fu>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("fu", {
+            props:['kong'],
+            template: '<li>{{kong}}</li>'
+        });
+
+
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            classes:["语文","数学","英语"],
+            classes2:["语文2","数学2","英语2"]
+        }
+    });
+</script>
+</body>
+</html>

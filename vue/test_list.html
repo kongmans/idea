@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+
+
+
+</head>
+<body>
+<div id="app">
+
+  <ul id="kong" >
+    <li v-for="item in items">
+      {{item.message}}
+    </li>
+  </ul>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+  let vueFirst= new Vue({
+    el :"#app",
+    data:{
+      items: [
+        {message: " 第一"},
+        {message: " 第二"},
+        {message: " 第三"},
+        {message: " 第四"}
+      ]
+    }
+  })
+</script>
+
+
+
+</body>
+</html>

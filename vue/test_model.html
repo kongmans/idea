@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<div id="app">
+    <p>username:<input type="text" v-model="user">{{user}} </p>
+    <p>password:<input type="password" v-model="pwd">{{pwd}} </p>
+
+    <input type="radio" name="sex" value="man" v-model="x">man
+    <input type="radio" name="sex" value="woman" v-model="x">woman
+    {{x}}
+
+    <select v-model="slc">
+    <option value="" disabled>--请选择--</option>
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+    </select>
+  {{slc}}
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            user: "",
+            pwd: "",
+            x: "",
+            slc: ""
+        }
+    })
+</script>
+
+
+</body>
+</html>

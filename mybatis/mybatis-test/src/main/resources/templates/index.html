@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+</head>
+<body>
+  <div  class="page"  id="app">
+    <input  v-model="keyword"   type="text"  autocomplete="off"/>
+    <button  @click.prevent="searchKey"   type="submit" >commit</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--th:text就是将div中的内容设置为它指定的值，和之前学习的Vue一样-->
+
+<script th:src="@{/js/axios.min.js}"></script>
+<script th:src="@{/js/vue.global.js}"></script>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+          keywords:'',
+          results:[]
+
+        },
+        method:{
+          searchKey(){
+            let key=this.keywords;
+
+          }
+
+
+        }
+
+
+    })
+
+
+
+</script>
+</body>
+</html>
